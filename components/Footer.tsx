@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Gamepad2, Mail, MapPin, MessageSquare, Twitter, Youtube, Instagram } from "lucide-react";
 
 export default function Footer() {
@@ -10,8 +11,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-primary to-brand-accent flex items-center justify-center">
-                <span className="font-heading font-bold text-sm">BX</span>
+              <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border border-brand-primary/50 shadow-[0_0_10px_rgba(124,58,237,0.5)]">
+                <Image src="/logo.png" alt="BattleXClash Logo" fill className="object-cover" />
               </div>
               <span className="font-heading font-bold text-xl tracking-wide">
                 Battle<span className="text-brand-accent">X</span>Clash

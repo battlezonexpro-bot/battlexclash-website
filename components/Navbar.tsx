@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X, Download, Trophy, Users, ShieldAlert } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -31,8 +32,8 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-primary to-brand-accent flex items-center justify-center transform group-hover:rotate-12 transition-transform">
-            <span className="font-heading font-bold text-xl">BX</span>
+          <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 group-hover:rotate-12 transition-transform border border-brand-primary/50 shadow-[0_0_10px_rgba(124,58,237,0.5)]">
+            <Image src="/logo.png" alt="BattleXClash Logo" fill className="object-cover" />
           </div>
           <span className="font-heading font-bold text-2xl tracking-wide">
             Battle<span className="text-brand-accent">X</span>Clash
