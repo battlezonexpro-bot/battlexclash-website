@@ -73,6 +73,35 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
+
+          {/* Free Fire Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.3 }}
+            className="mt-16 md:mt-24 w-full max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(124,58,237,0.4)] border border-brand-primary/30 relative h-[250px] sm:h-[350px] md:h-[500px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent z-10" />
+            <div className="absolute inset-0 bg-brand-primary/20 mix-blend-overlay z-10" />
+            <img 
+              src="https://wallpaperaccess.com/full/3565017.jpg" 
+              alt="Free Fire Tournament Banner"
+              className="w-full h-full object-cover object-top"
+            />
+            
+            {/* Banner Overlay Text */}
+            <div className="absolute bottom-6 md:bottom-12 left-6 md:left-12 z-20">
+              <span className="bg-brand-accent text-[#050816] px-3 py-1 font-bold text-xs md:text-sm rounded-full mb-3 inline-block uppercase tracking-wider">
+                Registration Open
+              </span>
+              <h3 className="font-heading font-black text-2xl md:text-4xl text-white drop-shadow-lg">
+                FREE FIRE MAX CLASH SQUAD
+              </h3>
+              <p className="text-gray-200 font-medium text-sm md:text-base mt-2 drop-shadow-md">
+                Win from a ₹50,000+ Prize Pool this weekend.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
