@@ -1,59 +1,49 @@
+import React from 'react';
+
 export default function Home() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "linear-gradient(135deg,#120022,#2b0057,#5b21b6)",
-        color: "white",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontFamily: "Arial, sans-serif",
-        textAlign: "center",
-        padding: "20px",
-      }}
-    >
-      <div>
-        <h1
-          style={{
-            fontSize: "60px",
-            fontWeight: "bold",
-            marginBottom: "15px",
-          }}
-        >
-          🎮 BattleXClash
-        </h1>
-
-        <p
-          style={{
-            fontSize: "22px",
-            color: "#ddd",
-            marginBottom: "30px",
-          }}
-        >
-          India's Ultimate BGMI Tournament Platform
-        </p>
-
-        <a
-          href="#"
-          style={{
-            background: "#a855f7",
-            color: "#fff",
-            padding: "15px 35px",
-            borderRadius: "12px",
-            textDecoration: "none",
-            fontWeight: "bold",
-            fontSize: "18px",
-          }}
-        >
-          ⬇ Download APK
-        </a>
-
-        <div style={{ marginTop: "40px" }}>
-          <h2>🏆 Daily Tournaments</h2>
-          <p>Win Real Cash • Instant Withdraw • Fair Play</p>
-        </div>
+    <>
+      {/* Animated Background Mesh */}
+      <div className="bg-mesh">
+        <div className="orb orb-1"></div>
+        <div className="orb orb-2"></div>
+        <div className="orb orb-3"></div>
       </div>
-    </main>
+      
+      {/* Main Content */}
+      <main className="hero-container">
+        <div className="glass-card">
+          <h1 className="title">
+            BattleXClash
+          </h1>
+          
+          <p className="subtitle">
+            India's Ultimate BGMI Tournament Platform. <br/>
+            Compete, Conquer, and Earn Real Rewards.
+          </p>
+
+          <a href="#" className="btn-primary">
+            <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download APK
+          </a>
+
+          <div className="features">
+            <div className="features-list">
+              <div className="feature-item">
+                <span>🏆</span> Daily Tournaments
+              </div>
+              <div className="feature-item">
+                <span>💸</span> Instant Withdrawals
+              </div>
+              <div className="feature-item">
+                <span>🛡️</span> 100% Fair Play
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </>
   );
 }
