@@ -2,7 +2,7 @@ export default function ContactPage() {
   return (
     <div className="pt-32 pb-20 container mx-auto px-6 text-center">
       <h1 className="font-heading text-4xl font-bold mb-4">Contact Us</h1>
-      <p className="text-gray-400 mb-8 max-w-xl mx-auto">For support, business inquiries, or tournament disputes, please reach out to us via email or join our Discord server.</p>
+      <p className="text-gray-400 mb-8 max-w-xl mx-auto">For support, business inquiries, or tournament disputes, please reach out to us via email or join our WhatsApp Channel.</p>
       <div className="glass-panel max-w-md mx-auto p-8 rounded-2xl border border-white/10">
         <div className="mb-6">
           <h3 className="font-bold text-xl mb-2 text-white">Email Support</h3>
