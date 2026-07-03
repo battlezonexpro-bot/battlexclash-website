@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, ChevronRight, CheckCircle2, Star, Trophy, Users, ShieldAlert, Zap } from "lucide-react";
+import { Download, ChevronRight, CheckCircle2, Star, Trophy, Users, ShieldAlert, Zap, Gamepad2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
