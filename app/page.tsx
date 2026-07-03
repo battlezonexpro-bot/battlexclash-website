@@ -115,6 +115,14 @@ export default function Home() {
             <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" /> LIVE
           </div>
 
+          {/* FREE FIRE MAX text */}
+          <div className="absolute bottom-3 left-3 sm:bottom-5 sm:left-5">
+            <p className="text-[9px] sm:text-xs text-brand-accent font-bold uppercase tracking-widest mb-0.5">Featured Game</p>
+            <h2 className="font-heading font-black text-base sm:text-2xl md:text-3xl text-white leading-tight drop-shadow-lg">
+              FREE FIRE MAX
+            </h2>
+          </div>
+
           {/* Join Now button */}
           <div className="absolute bottom-3 right-3 sm:bottom-5 sm:right-5">
             <a href={APK} className="btn-primary text-[10px] sm:text-xs px-3 py-1.5 sm:px-5 sm:py-2.5">
