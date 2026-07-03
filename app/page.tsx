@@ -30,7 +30,7 @@ const stats = [
   { label: "Winners/Day", value: "1000+", color: "text-green-400"     },
 ];
 
-const APK = "https://github.com/battlezonexpro-bot/Battlezonex/releases/latest/download/app.apk";
+const APK = "https://github.com/battlezonexpro-bot/battlexclash.github.io/releases/download/v1.0/app-debug.apk";
 
 export default function Home() {
   return (
