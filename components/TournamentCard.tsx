@@ -69,21 +69,6 @@ export default function TournamentCard({
           </div>
         </div>
 
-        {/* Details Grid */}
-        <div className="grid grid-cols-3 gap-3 mb-6 bg-white/5 rounded-xl p-3 border border-white/5">
-          <div className="flex flex-col items-center justify-center gap-1">
-            <MapIcon className="w-4 h-4 text-gray-400" />
-            <span className="text-xs font-medium">{map}</span>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-1 border-x border-white/10">
-            <Users className="w-4 h-4 text-gray-400" />
-            <span className="text-xs font-medium">{type}</span>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-1">
-            <Clock className="w-4 h-4 text-gray-400" />
-            <span className="text-xs font-medium">{timeStr}</span>
-          </div>
-        </div>
 
         {/* Progress Bar */}
         <div className="mb-6 mt-auto">
