@@ -31,13 +31,13 @@ export default function Home() {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-heading text-4xl sm:text-5xl md:text-7xl font-black tracking-tight mb-6"
+              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+              className="font-heading text-4xl sm:text-5xl md:text-7xl font-black tracking-tight mb-6 leading-tight"
             >
               DOMINATE THE <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-brand-primary to-brand-secondary">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-brand-primary to-brand-secondary drop-shadow-[0_0_20px_rgba(124,58,237,0.3)]">
                 BATTLEGROUND
               </span>
             </motion.h1>
@@ -45,8 +45,8 @@ export default function Home() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl leading-relaxed"
             >
               India's premier competitive esports platform. Play Free Fire MAX, CODM, and Valorant tournaments. Compete with pros, win real cash, and build your legacy.
             </motion.p>
@@ -57,13 +57,13 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center"
             >
-              <Link
-                href="/download"
+              <a
+                href="https://github.com/battlezonexpro-bot/Battlezonex/releases/latest/download/app.apk"
                 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_30px_rgba(124,58,237,0.3)] hover:shadow-[0_0_40px_rgba(124,58,237,0.5)] hover:-translate-y-1"
               >
                 <Download className="w-5 h-5" />
                 Download App
-              </Link>
+              </a>
               <Link
                 href="/tournaments"
                 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all"
@@ -114,13 +114,17 @@ export default function Home() {
             {["Free Fire MAX", "Clash Squad", "CODM", "Valorant"].map((game, i) => (
               <motion.div
                 key={game}
-                whileHover={{ y: -5 }}
-                className="glass-panel px-8 py-6 rounded-2xl flex items-center gap-4 cursor-pointer"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                whileHover={{ y: -5, scale: 1.05, boxShadow: "0 0 20px rgba(124,58,237,0.3)" }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="glass-panel px-8 py-6 rounded-2xl flex items-center gap-4 cursor-pointer border border-white/5 hover:border-brand-primary/50 transition-colors"
               >
-                <div className="w-12 h-12 rounded-full bg-brand-primary/20 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-brand-primary/20 flex items-center justify-center group-hover:bg-brand-primary/40 transition-colors">
                   <Gamepad2 className="text-brand-accent w-6 h-6" />
                 </div>
-                <span className="font-heading font-bold text-xl">{game}</span>
+                <span className="font-heading font-bold text-xl text-white">{game}</span>
               </motion.div>
             ))}
           </div>
@@ -136,13 +140,13 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
               Join thousands of players competing daily. Download the BattleXClash app and start your esports journey today.
             </p>
-            <Link
-              href="/download"
-              className="inline-flex items-center gap-2 bg-brand-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-transform hover:scale-105"
+            <a
+              href="https://github.com/battlezonexpro-bot/Battlezonex/releases/latest/download/app.apk"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-4 rounded-xl font-bold text-lg transition-transform hover:scale-105 shadow-[0_0_20px_rgba(124,58,237,0.4)]"
             >
               <Download className="w-5 h-5" />
               Download APK Now
-            </Link>
+            </a>
           </div>
         </div>
       </section>

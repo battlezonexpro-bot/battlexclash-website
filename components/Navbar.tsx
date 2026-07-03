@@ -52,13 +52,13 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
             </Link>
           ))}
-          <Link
-            href="/download"
+          <a
+            href="https://github.com/battlezonexpro-bot/Battlezonex/releases/latest/download/app.apk"
             className="flex items-center gap-2 bg-brand-primary hover:bg-brand-secondary text-white px-5 py-2.5 rounded-lg font-medium transition-all neon-box"
           >
             <Download className="w-4 h-4" />
             Download App
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -90,13 +90,13 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                href="/download"
+              <a
+                href="https://github.com/battlezonexpro-bot/Battlezonex/releases/latest/download/app.apk"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 bg-brand-primary text-white p-4 rounded-xl font-bold text-lg mt-2"
+                className="flex items-center justify-center gap-2 bg-brand-primary text-white p-4 rounded-xl font-bold text-lg mt-2 neon-box"
               >
                 <Download /> Download App Now
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}
