@@ -37,11 +37,19 @@ export default function Home() {
     <>
       {/* ── BG ── */}
       <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
-        <div className="absolute -top-1/4 -left-1/4 w-[70vw] h-[70vw] rounded-full bg-brand-primary/8 blur-[150px]" />
-        <div className="absolute top-1/2 -right-1/4 w-[60vw] h-[60vw] rounded-full bg-brand-secondary/8 blur-[150px]" />
-        <div className="absolute inset-0 opacity-[0.03]"
-          style={{ backgroundImage: "linear-gradient(rgba(225,29,72,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(225,29,72,0.5) 1px,transparent 1px)", backgroundSize: "64px 64px" }}
+        {/* Free Fire Wallpaper — blurred, dimmed */}
+        <img
+          src="/bg.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ filter: "blur(18px) brightness(0.18) saturate(1.4)", transform: "scale(1.08)" }}
         />
+        {/* Dark vignette overlay */}
+        <div className="absolute inset-0 bg-[#080608]/70" />
+        {/* Subtle red/purple colour tint */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-transparent to-brand-secondary/10" />
+        {/* Bottom fade to solid bg */}
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#080608] to-transparent" />
       </div>
 
       {/* ── HERO ── */}
