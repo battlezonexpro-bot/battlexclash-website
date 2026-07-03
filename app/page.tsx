@@ -84,7 +84,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent z-10" />
             <div className="absolute inset-0 bg-brand-primary/20 mix-blend-overlay z-10" />
             <img 
-              src="https://wallpaperaccess.com/full/3565017.jpg" 
+              src="/banner.jpg" 
               alt="Free Fire Tournament Banner"
               className="w-full h-full object-cover object-top"
             />
