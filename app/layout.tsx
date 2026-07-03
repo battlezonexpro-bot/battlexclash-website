@@ -27,29 +27,26 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${rajdhani.variable} antialiased`}>
       <body className="min-h-screen flex flex-col text-white selection:bg-brand-primary selection:text-white" style={{ backgroundColor: '#080608' }}>
-        {/* ── Global Blurred Background ── */}
+        {/* ── Global Background ── */}
         <div aria-hidden="true" style={{
-          position: 'fixed', inset: 0, zIndex: 0,
-          overflow: 'hidden', pointerEvents: 'none',
+          position: 'fixed', top: 0, left: 0,
+          width: '100%', height: '100%',
+          zIndex: 0, overflow: 'hidden', pointerEvents: 'none',
         }}>
-          {/* Wallpaper */}
-          <img
-            src="/bg.jpg"
-            alt=""
-            style={{
-              position: 'absolute', inset: 0,
-              width: '100%', height: '100%',
-              objectFit: 'cover', objectPosition: 'center',
-              filter: 'blur(4px) brightness(0.35) saturate(1.2)',
-              transform: 'scale(1.05)',
-            }}
-          />
-          {/* Dark overlay - light so image is visible */}
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(8,6,8,0.45)' }} />
-          {/* Brand colour tint */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(225,29,72,0.06) 0%, transparent 50%, rgba(147,51,234,0.06) 100%)' }} />
+          {/* Wallpaper — CSS bg is stable on mobile, no jump */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            backgroundImage: 'url(/bg.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'blur(3px) brightness(0.32) saturate(1.2)',
+          }} />
+          {/* Dark overlay */}
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(8,6,8,0.50)' }} />
+          {/* Brand tint */}
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(225,29,72,0.07) 0%, transparent 60%, rgba(147,51,234,0.07) 100%)' }} />
           {/* Bottom fade */}
-          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '220px', background: 'linear-gradient(to top, #080608, transparent)' }} />
+          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '180px', background: 'linear-gradient(to top, #080608, transparent)' }} />
         </div>
 
         {/* Content above bg */}
