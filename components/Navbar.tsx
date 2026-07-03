@@ -70,7 +70,7 @@ export default function Navbar() {
               className="btn-primary text-sm px-5 py-2.5"
             >
               <Download className="w-4 h-4" />
-              Download App
+              Download
             </a>
           </div>
 
@@ -129,7 +129,7 @@ export default function Navbar() {
                   className="btn-primary w-full text-base py-4"
                 >
                   <Download className="w-5 h-5" />
-                  Download App — Free
+                  Download
                 </a>
               </div>
             </div>

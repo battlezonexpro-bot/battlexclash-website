@@ -10,7 +10,14 @@ const rajdhani = Rajdhani({ subsets: ["latin"], variable: "--font-orbitron", wei
 export const metadata: Metadata = {
   title: "BattleXClash | Play Free Fire MAX Tournaments & Win Real Cash",
   description: "Join BattleXClash for daily Free Fire MAX esports tournaments. India's biggest competitive gaming platform. Play games, win real cash with instant UPI withdrawals, and fair play guaranteed.",
-  keywords: ["Free Fire MAX", "Esports", "Tournaments", "Play and Earn", "BattleXClash", "FF Max Tournament", "Win Real Cash", "Gaming App India"],
+  keywords: [
+    "Free Fire MAX", "Esports", "Tournaments", "Play and Earn", "BattleXClash", 
+    "FF Max Tournament", "Win Real Cash", "Gaming App India",
+    // Common spelling mistakes / Hindi variations
+    "batlexclash", "battle x clash", "betlexclash", "betal x clash", "battleclash",
+    "frefire", "freefire max", "free fire max apk", "tournment", "turnament",
+    "esport", "e-sport", "khelo aur jeeto", "ff max money", "battlezone",
+  ],
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",

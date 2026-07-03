@@ -75,7 +75,7 @@ export default function Home() {
           className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 justify-center mb-6 sm:mb-8 w-full max-w-[260px] sm:max-w-none mx-auto"
         >
           <a href={APK} className="btn-primary px-5 py-2.5 sm:px-7 sm:py-3.5 text-sm sm:text-base">
-            <Download className="w-4 h-4" /> Download Free APK
+            <Download className="w-4 h-4" /> Download
           </a>
           <Link href="/faq" className="btn-secondary px-5 py-2.5 sm:px-7 sm:py-3.5 text-sm sm:text-base">
             Learn More <ArrowRight className="w-3.5 h-3.5" />
@@ -201,7 +201,7 @@ export default function Home() {
                 Download BattleXClash and play Free Fire MAX tournaments for real cash prizes.
               </p>
               <a href={APK} className="btn-primary inline-flex px-6 py-3 text-sm sm:text-base">
-                <Download className="w-4 h-4 sm:w-5 sm:h-5" /> Download App — Free
+                <Download className="w-4 h-4 sm:w-5 sm:h-5" /> Download
               </a>
               <div className="mt-5 flex flex-wrap justify-center gap-3 text-[10px] sm:text-xs text-gray-600">
                 {["No hidden fees", "Instant UPI", "24/7 Support"].map((t) => (
