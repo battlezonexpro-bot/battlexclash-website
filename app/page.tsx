@@ -83,7 +83,7 @@ export default function Home() {
           <motion.div {...fadeUp(0.08)} className="text-center mb-6">
             <h1 className="font-heading font-black tracking-tight leading-[1.05] text-[clamp(2.5rem,8vw,5.5rem)] text-white">
               INDIA'S #1<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-brand-primary to-brand-secondary">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent">
                 ESPORTS PLATFORM
               </span>
             </h1>
