@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     "frefire", "freefire max", "free fire max apk", "tournment", "turnament",
     "esport", "e-sport", "khelo aur jeeto", "ff max money", "battlezone",
   ],
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+    shortcut: "/favicon.png",
+  },
   openGraph: {
     title: "BattleXClash - Play Free Fire MAX & Earn Real Cash",
     description: "India's #1 Competitive Esports Tournament Platform. Join daily matches and win instant UPI cash.",
