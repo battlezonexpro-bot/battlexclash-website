@@ -40,16 +40,16 @@ export default function RootLayout({
               position: 'absolute', inset: 0,
               width: '100%', height: '100%',
               objectFit: 'cover', objectPosition: 'center',
-              filter: 'blur(20px) brightness(0.15) saturate(1.3)',
-              transform: 'scale(1.1)',
+              filter: 'blur(4px) brightness(0.35) saturate(1.2)',
+              transform: 'scale(1.05)',
             }}
           />
-          {/* Dark overlay */}
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(8,6,8,0.65)' }} />
+          {/* Dark overlay - light so image is visible */}
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(8,6,8,0.45)' }} />
           {/* Brand colour tint */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(225,29,72,0.08) 0%, transparent 50%, rgba(147,51,234,0.08) 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(225,29,72,0.06) 0%, transparent 50%, rgba(147,51,234,0.06) 100%)' }} />
           {/* Bottom fade */}
-          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '200px', background: 'linear-gradient(to top, #080608, transparent)' }} />
+          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '220px', background: 'linear-gradient(to top, #080608, transparent)' }} />
         </div>
 
         {/* Content above bg */}
