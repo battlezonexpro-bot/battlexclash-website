@@ -108,28 +108,11 @@ export default function Home() {
             alt="Free Fire MAX Tournament"
             className="absolute inset-0 w-full h-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080608]/90 via-[#080608]/20 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/15 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080608]/60 via-transparent to-transparent" />
 
-          {/* LIVE pill */}
+          {/* LIVE pill only */}
           <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 flex items-center gap-1.5 bg-red-600/90 backdrop-blur-sm px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-full text-white text-[9px] sm:text-xs font-bold">
             <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" /> LIVE
-          </div>
-
-          {/* Banner content */}
-          <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5 md:p-8 flex flex-col sm:flex-row items-end justify-between gap-2 sm:gap-4">
-            <div>
-              <span className="inline-block bg-brand-accent text-[#080608] text-[8px] sm:text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider mb-1">
-                🔥 Registration Open
-              </span>
-              <h2 className="font-heading font-black text-sm sm:text-xl md:text-2xl text-white leading-tight">
-                Free Fire MAX — Clash Squad Series
-              </h2>
-              <p className="text-gray-400 text-[10px] sm:text-sm mt-0.5">Prize Pool: ₹50,000 · Today 8 PM</p>
-            </div>
-            <a href={APK} className="btn-primary text-[10px] sm:text-xs md:text-sm px-3 py-1.5 sm:px-4 sm:py-2 flex-shrink-0">
-              Join Now <ArrowRight className="w-3 h-3" />
-            </a>
           </div>
         </motion.div>
       </section>
