@@ -78,11 +78,11 @@ export default function Footer() {
             <ul className="space-y-4 mb-6">
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />
-                <span className="text-gray-600 text-sm">support@battlexclash.com</span>
+                <span className="text-gray-600 text-sm">battlexclash@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />
-                <span className="text-gray-600 text-sm">New Delhi, India</span>
+                <span className="text-gray-600 text-sm">West Bengal, India</span>
               </li>
               <li className="flex items-start gap-3">
                 <Gamepad2 className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />

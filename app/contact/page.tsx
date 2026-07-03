@@ -6,11 +6,15 @@ export default function ContactPage() {
       <div className="glass-panel max-w-md mx-auto p-8 rounded-2xl border border-white/10">
         <div className="mb-6">
           <h3 className="font-bold text-xl mb-2 text-white">Email Support</h3>
-          <a href="mailto:support@battlexclash.com" className="text-brand-accent hover:underline">support@battlexclash.com</a>
+          <a href="mailto:battlexclash@gmail.com" className="text-brand-accent hover:underline">battlexclash@gmail.com</a>
         </div>
         <div>
           <h3 className="font-bold text-xl mb-2 text-white">Community</h3>
           <a href="#" className="inline-block bg-[#5865F2] hover:bg-[#4752C4] text-white px-6 py-3 rounded-xl font-bold transition-colors">Join our Discord</a>
+        </div>
+        <div className="mt-6 pt-6 border-t border-white/10">
+          <h3 className="font-bold text-xl mb-2 text-white">Office Address</h3>
+          <p className="text-gray-400">West Bengal, India</p>
         </div>
       </div>
     </div>

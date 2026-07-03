@@ -108,11 +108,18 @@ export default function Home() {
             alt="Free Fire MAX Tournament"
             className="absolute inset-0 w-full h-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080608]/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080608]/80 via-transparent to-transparent" />
 
           {/* LIVE pill only */}
           <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 flex items-center gap-1.5 bg-red-600/90 backdrop-blur-sm px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-full text-white text-[9px] sm:text-xs font-bold">
             <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" /> LIVE
+          </div>
+
+          {/* Join Now button */}
+          <div className="absolute bottom-3 right-3 sm:bottom-5 sm:right-5">
+            <a href={APK} className="btn-primary text-[10px] sm:text-xs px-3 py-1.5 sm:px-5 sm:py-2.5">
+              Join Now <ArrowRight className="w-3 h-3" />
+            </a>
           </div>
         </motion.div>
       </section>
