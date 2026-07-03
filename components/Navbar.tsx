@@ -66,7 +66,7 @@ export default function Navbar() {
           {/* Download CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://github.com/battlezonexpro-bot/battlexclash.github.io/releases/download/v1.0/app-debug.apk"
+              href="/release.apk"
               className="btn-primary text-sm px-5 py-2.5"
             >
               <Download className="w-4 h-4" />
@@ -124,7 +124,7 @@ export default function Navbar() {
               ))}
               <div className="pt-3 border-t border-white/[0.06] mt-2">
                 <a
-                  href="https://github.com/battlezonexpro-bot/battlexclash.github.io/releases/download/v1.0/app-debug.apk"
+                  href="/release.apk"
                   onClick={() => setMobileMenuOpen(false)}
                   className="btn-primary w-full text-base py-4"
                 >

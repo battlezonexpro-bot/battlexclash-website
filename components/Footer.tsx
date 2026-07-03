@@ -49,7 +49,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: "Home", path: "/" },
-                { name: "Download App", path: "https://github.com/battlezonexpro-bot/battlexclash.github.io/releases/download/v1.0/app-debug.apk", ext: true },
+                { name: "Download App", path: "/release.apk", ext: true },
                 { name: "FAQ & Help", path: "/faq" },
                 { name: "Contact Us", path: "/contact" },
                 { name: "Privacy Policy", path: "/privacy-policy" },
@@ -90,7 +90,7 @@ export default function Footer() {
               </li>
             </ul>
             <a
-              href="https://github.com/battlezonexpro-bot/battlexclash.github.io/releases/download/v1.0/app-debug.apk"
+              href="/release.apk"
               className="btn-primary text-xs px-4 py-2.5 w-full justify-center"
             >
               <Download className="w-3.5 h-3.5" /> Download App

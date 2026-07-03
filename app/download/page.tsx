@@ -8,7 +8,7 @@ export default function DownloadPage() {
     version: "v2.1.0",
     date: "July 2026",
     size: "45 MB",
-    link: "https://github.com/battlezonexpro-bot/battlexclash.github.io/releases/download/v1.0/app-debug.apk",
+    link: "/release.apk",
   };
 
   const changelog = [
