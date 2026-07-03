@@ -26,12 +26,40 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${rajdhani.variable} antialiased`}>
-      <body className="min-h-screen flex flex-col bg-brand-bg text-white selection:bg-brand-primary selection:text-white">
-        <Navbar />
-        <main className="flex-1 flex flex-col">
-          {children}
-        </main>
-        <Footer />
+      <body className="min-h-screen flex flex-col text-white selection:bg-brand-primary selection:text-white" style={{ backgroundColor: '#080608' }}>
+        {/* ── Global Blurred Background ── */}
+        <div aria-hidden="true" style={{
+          position: 'fixed', inset: 0, zIndex: 0,
+          overflow: 'hidden', pointerEvents: 'none',
+        }}>
+          {/* Wallpaper */}
+          <img
+            src="/bg.jpg"
+            alt=""
+            style={{
+              position: 'absolute', inset: 0,
+              width: '100%', height: '100%',
+              objectFit: 'cover', objectPosition: 'center',
+              filter: 'blur(20px) brightness(0.15) saturate(1.3)',
+              transform: 'scale(1.1)',
+            }}
+          />
+          {/* Dark overlay */}
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(8,6,8,0.65)' }} />
+          {/* Brand colour tint */}
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(225,29,72,0.08) 0%, transparent 50%, rgba(147,51,234,0.08) 100%)' }} />
+          {/* Bottom fade */}
+          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '200px', background: 'linear-gradient(to top, #080608, transparent)' }} />
+        </div>
+
+        {/* Content above bg */}
+        <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+          <Navbar />
+          <main className="flex-1 flex flex-col">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
