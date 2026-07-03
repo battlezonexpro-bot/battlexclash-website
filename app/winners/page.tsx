@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function WinnersPage() {
   const recentWinners = [
-    { title: "BGMI Weekly Showdown", team: "Team Soul", prize: "₹50,000", mvp: "Goblin", date: "July 2, 2026", color: "from-blue-500 to-purple-600" },
+    { title: "Free Fire Clash Squad Open", team: "Team Soul", prize: "₹50,000", mvp: "Goblin", date: "July 2, 2026", color: "from-blue-500 to-purple-600" },
     { title: "Free Fire Clash", team: "Total Gaming", prize: "₹30,000", mvp: "Ajjubhai", date: "July 1, 2026", color: "from-orange-500 to-red-600" },
     { title: "Valorant Invitational", team: "Global Esports", prize: "₹1,00,000", mvp: "SkRossi", date: "June 28, 2026", color: "from-pink-500 to-rose-600" },
   ];

@@ -12,7 +12,7 @@ export default function DownloadPage() {
   };
 
   const changelog = [
-    "Added new BGMI tournament formats",
+    "Added new Free Fire tournament formats",
     "Improved wallet withdrawal speeds",
     "Fixed minor UI bugs in the leaderboard",
     "Enhanced anti-cheat integration",

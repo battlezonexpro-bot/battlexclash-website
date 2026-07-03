@@ -5,7 +5,7 @@ export default function PrivacyPolicyPage() {
       <div className="prose prose-invert max-w-none text-gray-300">
         <p className="mb-4">Last updated: July 2026</p>
         <h2 className="text-2xl font-bold mt-8 mb-4 text-white">1. Information We Collect</h2>
-        <p className="mb-4">When you register on BattleXClash, we collect your email address, username, game IDs (like BGMI character ID), and payment information (UPI ID) solely for the purpose of distributing tournament winnings.</p>
+        <p className="mb-4">When you register on BattleXClash, we collect your email address, username, game IDs (like Free Fire UID), and payment information (UPI ID) solely for the purpose of distributing tournament winnings.</p>
         
         <h2 className="text-2xl font-bold mt-8 mb-4 text-white">2. How We Use Your Information</h2>
         <p className="mb-4">We use your information to manage tournaments, verify match results, process withdrawals, and ensure a fair gaming environment.</p>

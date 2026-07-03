@@ -34,7 +34,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-heading text-5xl md:text-7xl font-black tracking-tight mb-6"
+              className="font-heading text-4xl sm:text-5xl md:text-7xl font-black tracking-tight mb-6"
             >
               DOMINATE THE <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-brand-primary to-brand-secondary">
@@ -48,7 +48,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl"
             >
-              India's premier competitive esports platform. Play BGMI, Free Fire, and Valorant tournaments. Compete with pros, win real cash, and build your legacy.
+              India's premier competitive esports platform. Play Free Fire MAX, CODM, and Valorant tournaments. Compete with pros, win real cash, and build your legacy.
             </motion.p>
 
             <motion.div
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
           
           <div className="flex flex-wrap justify-center gap-6">
-            {["BGMI", "Free Fire MAX", "CODM", "Valorant"].map((game, i) => (
+            {["Free Fire MAX", "Clash Squad", "CODM", "Valorant"].map((game, i) => (
               <motion.div
                 key={game}
                 whileHover={{ y: -5 }}

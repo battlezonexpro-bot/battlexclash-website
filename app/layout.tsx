@@ -9,7 +9,7 @@ const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
 
 export const metadata: Metadata = {
   title: "BattleXClash - India's Competitive Esports Tournament Platform",
-  description: "Join BattleXClash for daily BGMI, Free Fire, and Valorant tournaments. Instant withdrawals, fair play, and massive prize pools.",
+  description: "Join BattleXClash for daily Free Fire MAX, Valorant, and CODM tournaments. Instant withdrawals, fair play, and massive prize pools.",
   openGraph: {
     title: "BattleXClash - Play & Earn",
     description: "India's Competitive Esports Tournament Platform",
