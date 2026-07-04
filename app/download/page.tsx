@@ -8,7 +8,7 @@ export default function DownloadPage() {
     version: "v2.1.0",
     date: "July 2026",
     size: "45 MB",
-    link: "/release.apk",
+    link: "/battlexclash.apk",
   };
 
   const changelog = [

@@ -30,7 +30,7 @@ const stats = [
   { label: "Winners/Day", value: "1000+", color: "text-green-400"     },
 ];
 
-const APK = "/release.apk";
+const APK = "/battlexclash.apk";
 
 export default function Home() {
   return (

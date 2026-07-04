@@ -174,7 +174,7 @@ export default function TournamentsPage() {
 
                   {/* Button */}
                   <a
-                    href="/release.apk"
+                    href="/battlexclash.apk"
                     className={`w-full py-3 rounded-xl font-bold text-sm text-center block transition-all ${
                       t.status === "Live"
                         ? "bg-red-500/15 text-red-400 border border-red-500/25 hover:bg-red-500/25"
