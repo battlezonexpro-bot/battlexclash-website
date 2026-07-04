@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
 
+const BASE = "https://battlexclash.online";
+
 export const metadata: Metadata = {
   title: "FAQ – Frequently Asked Questions",
-  description: "Got questions about BattleXClash? Find answers about Free Fire MAX tournaments, withdrawals, rules, account, and how to join.",
-  alternates: {
-    canonical: "https://battlexclash.online/faq",
-  },
+  description:
+    "Got questions about BattleXClash? Find answers about Free Fire MAX tournaments, UPI withdrawals, entry fees, fair play, and account setup.",
+  alternates: { canonical: `${BASE}/faq` },
   openGraph: {
     title: "FAQ – Frequently Asked Questions | BattleXClash",
-    description: "Got questions about BattleXClash? Find answers about Free Fire MAX tournaments, withdrawals, rules, account, and how to join.",
-    url: "https://battlexclash.online/faq",
+    description:
+      "Everything you need to know about BattleXClash – tournaments, prizes, withdrawals, and more.",
+    url: `${BASE}/faq`,
     siteName: "BattleXClash",
-    images: [{ url: "https://battlexclash.online/banner.jpg", width: 1200, height: 630, alt: "BattleXClash – Free Fire MAX Tournaments" }],
+    images: [{ url: `${BASE}/banner.jpg`, width: 1200, height: 630, alt: "BattleXClash FAQ" }],
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "FAQ – Frequently Asked Questions | BattleXClash",
-    description: "Got questions about BattleXClash? Find answers about Free Fire MAX tournaments, withdrawals, rules, account, and how to join.",
-    images: ["https://battlexclash.online/banner.jpg"],
+    description: "Everything you need to know about BattleXClash esports tournaments.",
+    images: [`${BASE}/banner.jpg`],
   },
 };

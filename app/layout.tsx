@@ -4,33 +4,35 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+// ─── Font loading: preload only used subsets/weights ───────────────────────
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  preload: true,
 });
 const rajdhani = Rajdhani({
   subsets: ["latin"],
   variable: "--font-orbitron",
-  weight: ["400", "500", "600", "700"],
+  weight: ["600", "700"],
+  display: "swap",
+  preload: true,
 });
 
+// ─── Constants ─────────────────────────────────────────────────────────────
 const BASE_URL = "https://battlexclash.online";
-
 const TITLE = "BattleXClash | Free Fire MAX Tournaments, Esports & Win Real Cash";
 const DESCRIPTION =
   "Join BattleXClash to play daily Free Fire MAX tournaments, compete with players across India, win real cash, enjoy instant UPI withdrawals, secure esports matches, and fair competitive gaming.";
 const KEYWORDS = [
-  "BattleXClash", "Battle X Clash", "Battle Clash", "Battle Clash X", "Battle X",
-  "BattleX", "BattleX App", "BattleXClash App", "BattleXClash Tournament",
-  "BattleXClash Esports", "BattleXClash India", "BattleXClash Gaming",
-  "BattleXClash Free Fire", "BattleXClash Free Fire MAX", "BattleXClash Download",
-  "BattleXClash APK", "BattleXClash Cash Tournament",
+  "BattleXClash", "Battle X Clash", "Battle Clash", "BattleX", "BattleX App",
+  "BattleXClash App", "BattleXClash Tournament", "BattleXClash Esports",
+  "BattleXClash India", "BattleXClash Free Fire MAX", "BattleXClash APK",
   "Free Fire", "Free Fire MAX", "Free Fire Tournament", "Free Fire Tournament India",
   "Free Fire MAX Tournament", "Free Fire Cash Tournament", "Free Fire Custom Room",
-  "Free Fire Room Match", "Free Fire Daily Tournament", "Free Fire Online Tournament",
-  "Free Fire Solo Tournament", "Free Fire Duo Tournament", "Free Fire Squad Tournament",
-  "FF Max", "FF MAX Tournament", "FF Tournament", "FF Cash Tournament",
+  "Free Fire Daily Tournament", "Free Fire Solo Tournament", "Free Fire Squad Tournament",
+  "FF Max", "FF MAX Tournament", "FF Cash Tournament",
   "Esports", "Esports India", "Gaming Tournament", "Tournament App", "Online Tournament",
   "Battle Royale Tournament", "Play and Earn", "Win Real Cash", "Cash Prize Tournament",
   "Gaming App India", "Instant UPI Withdrawal", "Custom Room", "Daily Tournament",
@@ -38,6 +40,7 @@ const KEYWORDS = [
 ];
 const OG_IMAGE = `${BASE_URL}/banner.jpg`;
 
+// ─── Root metadata ──────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
@@ -46,9 +49,7 @@ export const metadata: Metadata = {
   },
   description: DESCRIPTION,
   keywords: KEYWORDS,
-  alternates: {
-    canonical: BASE_URL,
-  },
+  alternates: { canonical: BASE_URL },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -62,7 +63,14 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: BASE_URL,
     siteName: "BattleXClash",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "BattleXClash – Free Fire MAX Esports Tournaments" }],
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "BattleXClash – Free Fire MAX Esports Tournaments India",
+      },
+    ],
     locale: "en_IN",
     type: "website",
   },
@@ -75,10 +83,11 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
 };
 
+// ─── JSON-LD Structured Data ────────────────────────────────────────────────
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -93,14 +102,22 @@ const jsonLd = {
         "width": 192,
         "height": 192,
       },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "battlexclash@gmail.com",
+        "contactType": "customer support",
+        "availableLanguage": ["English", "Hindi"],
+        "areaServed": "IN",
+      },
     },
     {
       "@type": "WebSite",
       "@id": `${BASE_URL}/#website`,
       "url": BASE_URL,
       "name": "BattleXClash",
-      "description": DESCRIPTION,
+      "description": "India's Free Fire MAX esports tournament platform.",
       "publisher": { "@id": `${BASE_URL}/#organization` },
+      "inLanguage": "en-IN",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -111,32 +128,38 @@ const jsonLd = {
       },
     },
     {
+      // SoftwareApplication – NO fake AggregateRating
       "@type": "SoftwareApplication",
       "@id": `${BASE_URL}/#software`,
       "name": "BattleXClash",
       "applicationCategory": "GameApplication",
       "operatingSystem": "ANDROID",
       "downloadUrl": `${BASE_URL}/download`,
+      "url": `${BASE_URL}/download`,
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "INR",
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "1000",
-      },
     },
   ],
 };
 
+// ─── Root Layout ────────────────────────────────────────────────────────────
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${rajdhani.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${spaceGrotesk.variable} ${rajdhani.variable} antialiased`}
+    >
       <head>
+        {/* DNS prefetch for performance */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -146,7 +169,7 @@ export default function RootLayout({
         className="min-h-screen flex flex-col text-white selection:bg-brand-primary selection:text-white"
         style={{ backgroundColor: "#080608" }}
       >
-        {/* ── Global Background ── */}
+        {/* ── Fixed background (kept outside scroll for CLS prevention) ── */}
         <div
           aria-hidden="true"
           style={{
@@ -191,7 +214,7 @@ export default function RootLayout({
           />
         </div>
 
-        {/* Content above bg */}
+        {/* ── Main content ── */}
         <div
           style={{
             position: "relative",
@@ -202,7 +225,9 @@ export default function RootLayout({
           }}
         >
           <Navbar />
-          <main className="flex-1 flex flex-col">{children}</main>
+          <main className="flex-1 flex flex-col" id="main-content">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>
