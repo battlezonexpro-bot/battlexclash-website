@@ -90,7 +90,7 @@ export default function RootLayout({
             })
           }}
         />
-      </head>>
+      </head>
       <body className="min-h-screen flex flex-col text-white selection:bg-brand-primary selection:text-white" style={{ backgroundColor: '#080608' }}>
         {/* ── Global Background ── */}
         <div aria-hidden="true" style={{
