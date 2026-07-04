@@ -7,19 +7,23 @@ import Footer from "@/components/Footer";
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-inter", weight: ["300","400","500","600","700"] });
 const rajdhani = Rajdhani({ subsets: ["latin"], variable: "--font-orbitron", weight: ["400","500","600","700"] });
 
+const BASE_URL = "https://battlexclash.online";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://battlexclash.online"),
-  title: "BattleXClash | Free Fire MAX Tournaments, Esports & Win Real Cash",
-  description: "Join BattleXClash to play daily Free Fire MAX tournaments, compete with players across India, win real cash prizes, instant UPI withdrawals and exciting esports competitions.",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "BattleXClash | Play Free Fire MAX Tournaments & Win Real Cash",
+    template: "%s | BattleXClash",
+  },
+  description: "Join BattleXClash for daily Free Fire MAX tournaments, compete with players across India, and win real cash with instant UPI withdrawals.",
   keywords: [
-    "BattleXClash", "Battle X Clash", "battlexclash", "battlex clash", "battle clash", 
-    "Free Fire MAX", "Free Fire Tournament", "FF Max Tournament", "Free Fire Esports", 
-    "Esports India", "Gaming Tournament", "Play and Earn", "Win Real Cash", 
-    "UPI Tournament", "BGMI Tournament", "Gaming App", "Tournament App", 
-    "Free Fire India", "Cash Tournament", "Battle Royale", "Online Tournament"
+    "BattleXClash", "Battle X Clash", "battlexclash", "Free Fire MAX Tournament",
+    "Free Fire Tournament India", "FF Max Tournament", "Esports India", "Gaming Tournament",
+    "Play and Earn", "Win Real Cash", "UPI Withdrawal", "Free Fire Custom Room",
+    "Daily Tournament", "Gaming App India", "Free Fire Esports",
   ],
   alternates: {
-    canonical: "https://battlexclash.online",
+    canonical: BASE_URL,
   },
   icons: {
     icon: [
@@ -30,65 +34,75 @@ export const metadata: Metadata = {
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "BattleXClash | Free Fire MAX Tournaments, Esports & Win Real Cash",
-    description: "Join BattleXClash to play daily Free Fire MAX tournaments, compete with players across India, win real cash prizes, instant UPI withdrawals and exciting esports competitions.",
-    url: "https://battlexclash.online",
+    title: "BattleXClash | Play Free Fire MAX Tournaments & Win Real Cash",
+    description: "Join BattleXClash for daily Free Fire MAX tournaments, compete with players across India, and win real cash with instant UPI withdrawals.",
+    url: BASE_URL,
     siteName: "BattleXClash",
-    images: [{ url: "https://battlexclash.online/banner.jpg", width: 1200, height: 630 }],
+    images: [{ url: `${BASE_URL}/banner.jpg`, width: 1200, height: 630, alt: "BattleXClash – Free Fire MAX Tournaments" }],
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BattleXClash | Free Fire MAX Tournaments, Esports & Win Real Cash",
-    description: "Join BattleXClash to play daily Free Fire MAX tournaments, compete with players across India, win real cash prizes, instant UPI withdrawals and exciting esports competitions.",
-    images: ["https://battlexclash.online/banner.jpg"],
-  }
+    title: "BattleXClash | Play Free Fire MAX Tournaments & Win Real Cash",
+    description: "Join BattleXClash for daily Free Fire MAX tournaments, compete with players across India, and win real cash with instant UPI withdrawals.",
+    images: [`${BASE_URL}/banner.jpg`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      "name": "BattleXClash",
+      "url": BASE_URL,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${BASE_URL}/favicon.png`,
+      },
+      "sameAs": [],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${BASE_URL}/#website`,
+      "url": BASE_URL,
+      "name": "BattleXClash",
+      "description": "India's Free Fire MAX esports tournament platform.",
+      "publisher": { "@id": `${BASE_URL}/#organization` },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": `${BASE_URL}/tournaments?q={search_term_string}` },
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${BASE_URL}/#software`,
+      "name": "BattleXClash",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "ANDROID",
+      "downloadUrl": `${BASE_URL}/download`,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    },
+  ],
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${spaceGrotesk.variable} ${rajdhani.variable} antialiased`}>
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "Organization",
-                  "@id": "https://battlexclash.online/#organization",
-                  "name": "BattleXClash",
-                  "url": "https://battlexclash.online",
-                  "logo": "https://battlexclash.online/logo.png"
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://battlexclash.online/#website",
-                  "url": "https://battlexclash.online",
-                  "name": "BattleXClash",
-                  "publisher": {
-                    "@id": "https://battlexclash.online/#organization"
-                  }
-                },
-                {
-                  "@type": "SoftwareApplication",
-                  "@id": "https://battlexclash.online/#software",
-                  "name": "BattleXClash App",
-                  "applicationCategory": "GameApplication",
-                  "operatingSystem": "ANDROID",
-                  "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "INR"
-                  }
-                }
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="min-h-screen flex flex-col text-white selection:bg-brand-primary selection:text-white" style={{ backgroundColor: '#080608' }}>
