@@ -1,13 +1,11 @@
-import type { Metadata } from "next";
-import { Rajdhani, Space_Grotesk } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+with open('/storage/emulated/0/battlexclash-website/app/layout.tsx', 'r') as f:
+    content = f.read()
 
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-inter", weight: ["300","400","500","600","700"] });
-const rajdhani = Rajdhani({ subsets: ["latin"], variable: "--font-orbitron", weight: ["400","500","600","700"] });
+import re
 
-export const metadata: Metadata = {
+# We will completely replace the metadata block.
+metadata_pattern = r'export const metadata: Metadata = \{.*?\n\};'
+metadata_replacement = """export const metadata: Metadata = {
   metadataBase: new URL("https://battlexclash.online"),
   title: "BattleXClash | Free Fire MAX Tournaments, Esports & Win Real Cash",
   description: "Join BattleXClash to play daily Free Fire MAX tournaments, compete with players across India, win real cash prizes, instant UPI withdrawals and exciting esports competitions.",
@@ -44,14 +42,12 @@ export const metadata: Metadata = {
     description: "Join BattleXClash to play daily Free Fire MAX tournaments, compete with players across India, win real cash prizes, instant UPI withdrawals and exciting esports competitions.",
     images: ["https://battlexclash.online/banner.jpg"],
   }
-};
+};"""
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <head>
+content = re.sub(metadata_pattern, metadata_replacement, content, flags=re.DOTALL)
+
+# Now inject JSON-LD into the head
+json_ld = """
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -89,40 +85,10 @@ export default function RootLayout({
               ]
             })
           }}
-        />
-      </head>>
-      <body className="min-h-screen flex flex-col text-white selection:bg-brand-primary selection:text-white" style={{ backgroundColor: '#080608' }}>
-        {/* ── Global Background ── */}
-        <div aria-hidden="true" style={{
-          position: 'fixed', top: 0, left: 0,
-          width: '100%', height: '100%',
-          zIndex: 0, overflow: 'hidden', pointerEvents: 'none',
-        }}>
-          {/* Wallpaper — CSS bg is stable on mobile, no jump */}
-          <div style={{
-            position: 'absolute', inset: 0,
-            backgroundImage: 'url(/bg.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            filter: 'blur(3px) brightness(0.32) saturate(1.2)',
-          }} />
-          {/* Dark overlay */}
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(8,6,8,0.50)' }} />
-          {/* Brand tint */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(225,29,72,0.07) 0%, transparent 60%, rgba(147,51,234,0.07) 100%)' }} />
-          {/* Bottom fade */}
-          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '180px', background: 'linear-gradient(to top, #080608, transparent)' }} />
-        </div>
+        />"""
 
-        {/* Content above bg */}
-        <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-          <Navbar />
-          <main className="flex-1 flex flex-col">
-            {children}
-          </main>
-          <Footer />
-        </div>
-      </body>
-    </html>
-  );
-}
+content = content.replace('<html lang="en"', f'<html lang="en" className={{`${{spaceGrotesk.variable}} ${{rajdhani.variable}} antialiased`}}>\n      <head>{json_ld}\n      </head>')
+content = content.replace(' className={`${spaceGrotesk.variable} ${rajdhani.variable} antialiased`}>', '>')
+
+with open('/storage/emulated/0/battlexclash-website/app/layout.tsx', 'w') as f:
+    f.write(content)
