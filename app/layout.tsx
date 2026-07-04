@@ -19,9 +19,12 @@ export const metadata: Metadata = {
     "esport", "e-sport", "khelo aur jeeto", "ff max money", "battlezone",
   ],
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", sizes: "192x192", type: "image/png" },
+    ],
     apple: "/favicon.png",
-    shortcut: "/favicon.png",
+    shortcut: "/favicon.svg",
   },
   openGraph: {
     title: "BattleXClash - Play Free Fire MAX & Earn Real Cash",

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#2d0060"/>
+      <stop offset="100%" stop-color="#08001a"/>
+    </radialGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#8b00ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#8b00ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#da70d6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#da70d6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#b000ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#b000ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b00ff"/>
+      <stop offset="100%" stop-color="#da70d6"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="textglow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="roundedClip">
+      <rect width="192" height="192" rx="40" ry="40"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="192" height="192" rx="40" ry="40" fill="url(#bg)"/>
+
+  <!-- Blur blobs clipped -->
+  <g clip-path="url(#roundedClip)">
+    <!-- top-left purple blob -->
+    <ellipse cx="20" cy="20" rx="70" ry="70" fill="url(#glow1)" filter="url(#blur1)"/>
+    <!-- bottom-right blob -->
+    <ellipse cx="172" cy="172" rx="65" ry="65" fill="url(#glow2)" filter="url(#blur1)"/>
+    <!-- center subtle glow -->
+    <ellipse cx="96" cy="96" rx="55" ry="55" fill="url(#glow3)" filter="url(#blur2)"/>
+  </g>
+
+  <!-- Glass card -->
+  <rect x="30" y="30" width="132" height="132" rx="24" ry="24"
+        fill="rgba(255,255,255,0.05)"
+        stroke="rgba(180,0,255,0.4)" stroke-width="1.5"/>
+
+  <!-- BX Text with glow -->
+  <text x="96" y="108"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="58" font-weight="900"
+        text-anchor="middle"
+        fill="rgba(200,100,255,0.4)"
+        filter="url(#blur2)">BX</text>
+  <text x="96" y="108"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="58" font-weight="900"
+        text-anchor="middle"
+        fill="white">BX</text>
+
+  <!-- Purple accent bar -->
+  <rect x="66" y="118" width="60" height="4" rx="2" fill="url(#bar)"/>
+</svg>
