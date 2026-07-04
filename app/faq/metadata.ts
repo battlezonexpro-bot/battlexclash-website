@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
 
-const BASE = "https://battlexclash.online";
-
 export const metadata: Metadata = {
   title: "FAQ – Frequently Asked Questions",
-  description: "Got questions about BattleXClash? Find answers about tournaments, withdrawals, rules, and how to join.",
-  alternates: { canonical: `${BASE}/faq` },
+  description: "Got questions about BattleXClash? Find answers about Free Fire MAX tournaments, withdrawals, rules, account, and how to join.",
+  alternates: {
+    canonical: "https://battlexclash.online/faq",
+  },
   openGraph: {
     title: "FAQ – Frequently Asked Questions | BattleXClash",
-    description: "Got questions about BattleXClash? Find answers about tournaments, withdrawals, rules, and how to join.",
-    url: `${BASE}/faq`,
-    images: [{ url: `${BASE}/banner.jpg`, width: 1200, height: 630 }],
+    description: "Got questions about BattleXClash? Find answers about Free Fire MAX tournaments, withdrawals, rules, account, and how to join.",
+    url: "https://battlexclash.online/faq",
+    siteName: "BattleXClash",
+    images: [{ url: "https://battlexclash.online/banner.jpg", width: 1200, height: 630, alt: "BattleXClash – Free Fire MAX Tournaments" }],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ – Frequently Asked Questions | BattleXClash",
+    description: "Got questions about BattleXClash? Find answers about Free Fire MAX tournaments, withdrawals, rules, account, and how to join.",
+    images: ["https://battlexclash.online/banner.jpg"],
   },
 };

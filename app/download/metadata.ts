@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
 
-const BASE = "https://battlexclash.online";
-
 export const metadata: Metadata = {
-  title: "Download BattleXClash – Free Fire MAX Tournament App",
-  description: "Download BattleXClash APK for Android. Join Free Fire MAX tournaments, win real cash, and withdraw instantly via UPI.",
-  alternates: { canonical: `${BASE}/download` },
+  title: "Download BattleXClash APK – Free Fire MAX Tournament App",
+  description: "Download the BattleXClash app for Android. Join Free Fire MAX daily tournaments, win cash prizes, and withdraw instantly via UPI.",
+  alternates: {
+    canonical: "https://battlexclash.online/download",
+  },
   openGraph: {
-    title: "Download BattleXClash App",
-    description: "Download the BattleXClash app to join Free Fire MAX tournaments and win real cash.",
-    url: `${BASE}/download`,
-    images: [{ url: `${BASE}/banner.jpg`, width: 1200, height: 630 }],
+    title: "Download BattleXClash APK – Free Fire MAX Tournament App | BattleXClash",
+    description: "Download the BattleXClash app for Android. Join Free Fire MAX daily tournaments, win cash prizes, and withdraw instantly via UPI.",
+    url: "https://battlexclash.online/download",
+    siteName: "BattleXClash",
+    images: [{ url: "https://battlexclash.online/banner.jpg", width: 1200, height: 630, alt: "BattleXClash – Free Fire MAX Tournaments" }],
+    locale: "en_IN",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Download BattleXClash App",
-    description: "Download the BattleXClash app to join Free Fire MAX tournaments and win real cash.",
-    images: [`${BASE}/banner.jpg`],
+    title: "Download BattleXClash APK – Free Fire MAX Tournament App | BattleXClash",
+    description: "Download the BattleXClash app for Android. Join Free Fire MAX daily tournaments, win cash prizes, and withdraw instantly via UPI.",
+    images: ["https://battlexclash.online/banner.jpg"],
   },
 };

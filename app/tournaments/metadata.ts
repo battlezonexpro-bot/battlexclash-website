@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
 
-const BASE = "https://battlexclash.online";
-
 export const metadata: Metadata = {
-  title: "Tournaments – Free Fire MAX Custom Rooms",
-  description: "Browse and join daily Free Fire MAX custom room tournaments on BattleXClash. Compete, win, and withdraw instantly via UPI.",
-  alternates: { canonical: `${BASE}/tournaments` },
+  title: "Free Fire MAX Tournaments – Join & Win Cash",
+  description: "Browse daily Free Fire MAX custom room tournaments on BattleXClash. Compete with top players across India and win real cash prizes with instant UPI withdrawal.",
+  alternates: {
+    canonical: "https://battlexclash.online/tournaments",
+  },
   openGraph: {
-    title: "Tournaments | BattleXClash",
-    description: "Join Free Fire MAX custom room tournaments and win real cash daily.",
-    url: `${BASE}/tournaments`,
-    images: [{ url: `${BASE}/banner.jpg`, width: 1200, height: 630 }],
+    title: "Free Fire MAX Tournaments – Join & Win Cash | BattleXClash",
+    description: "Browse daily Free Fire MAX custom room tournaments on BattleXClash. Compete with top players across India and win real cash prizes with instant UPI withdrawal.",
+    url: "https://battlexclash.online/tournaments",
+    siteName: "BattleXClash",
+    images: [{ url: "https://battlexclash.online/banner.jpg", width: 1200, height: 630, alt: "BattleXClash – Free Fire MAX Tournaments" }],
+    locale: "en_IN",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tournaments | BattleXClash",
-    description: "Join Free Fire MAX custom room tournaments and win real cash daily.",
-    images: [`${BASE}/banner.jpg`],
+    title: "Free Fire MAX Tournaments – Join & Win Cash | BattleXClash",
+    description: "Browse daily Free Fire MAX custom room tournaments on BattleXClash. Compete with top players across India and win real cash prizes with instant UPI withdrawal.",
+    images: ["https://battlexclash.online/banner.jpg"],
   },
 };

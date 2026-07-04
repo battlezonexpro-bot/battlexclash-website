@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
 
-const BASE = "https://battlexclash.online";
-
 export const metadata: Metadata = {
-  title: "Leaderboard – Top Free Fire MAX Players",
-  description: "See the top-ranked Free Fire MAX players on BattleXClash. Climb the leaderboard and win exclusive cash prizes.",
-  alternates: { canonical: `${BASE}/leaderboard` },
+  title: "Leaderboard – Top Free Fire MAX Players India",
+  description: "See the top-ranked Free Fire MAX tournament players on BattleXClash. Climb the leaderboard and win exclusive cash prizes.",
+  alternates: {
+    canonical: "https://battlexclash.online/leaderboard",
+  },
   openGraph: {
-    title: "Leaderboard | BattleXClash",
-    description: "Top Free Fire MAX players ranked by earnings on BattleXClash.",
-    url: `${BASE}/leaderboard`,
-    images: [{ url: `${BASE}/banner.jpg`, width: 1200, height: 630 }],
+    title: "Leaderboard – Top Free Fire MAX Players India | BattleXClash",
+    description: "See the top-ranked Free Fire MAX tournament players on BattleXClash. Climb the leaderboard and win exclusive cash prizes.",
+    url: "https://battlexclash.online/leaderboard",
+    siteName: "BattleXClash",
+    images: [{ url: "https://battlexclash.online/banner.jpg", width: 1200, height: 630, alt: "BattleXClash – Free Fire MAX Tournaments" }],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Leaderboard – Top Free Fire MAX Players India | BattleXClash",
+    description: "See the top-ranked Free Fire MAX tournament players on BattleXClash. Climb the leaderboard and win exclusive cash prizes.",
+    images: ["https://battlexclash.online/banner.jpg"],
   },
 };
