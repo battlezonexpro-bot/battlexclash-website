@@ -8,6 +8,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-inter
 const rajdhani = Rajdhani({ subsets: ["latin"], variable: "--font-orbitron", weight: ["400","500","600","700"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://battlexclash.online"),
   title: "BattleXClash | Play Free Fire MAX Tournaments & Win Real Cash",
   description: "Join BattleXClash for daily Free Fire MAX esports tournaments. India's biggest competitive gaming platform. Play games, win real cash with instant UPI withdrawals, and fair play guaranteed.",
   keywords: [
@@ -29,9 +30,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "BattleXClash - Play Free Fire MAX & Earn Real Cash",
     description: "India's #1 Competitive Esports Tournament Platform. Join daily matches and win instant UPI cash.",
-    url: "https://battlexclash.com",
+    url: "https://battlexclash.online",
     siteName: "BattleXClash",
-    images: [{ url: "https://battlexclash.com/banner.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://battlexclash.online/banner.jpg", width: 1200, height: 630 }],
     locale: "en_IN",
     type: "website",
   }
