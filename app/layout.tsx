@@ -51,13 +51,28 @@ export const metadata: Metadata = {
   keywords: KEYWORDS,
   alternates: { canonical: BASE_URL },
   icons: {
+    // favicon.ico – serves 16/32/48 embedded sizes (Google primary favicon)
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.ico",        rel: "icon",       sizes: "any" },
+      { url: "/favicon-16x16.png",  rel: "icon",       sizes: "16x16",  type: "image/png" },
+      { url: "/favicon-32x32.png",  rel: "icon",       sizes: "32x32",  type: "image/png" },
+      { url: "/favicon-48x48.png",  rel: "icon",       sizes: "48x48",  type: "image/png" },
+      { url: "/favicon-192x192.png",rel: "icon",       sizes: "192x192",type: "image/png" },
+      { url: "/favicon-512x512.png",rel: "icon",       sizes: "512x512",type: "image/png" },
+      { url: "/favicon.svg",        rel: "icon",       type: "image/svg+xml" },
     ],
-    apple: "/favicon.png",
-    shortcut: "/favicon.svg",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    other: [
+      { rel: "manifest", url: "/site.webmanifest" },
+    ],
   },
+  // theme-color for browser chrome
+  themeColor: [
+    { color: "#080608" },
+  ],
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
@@ -158,6 +173,11 @@ export default function RootLayout({
         {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Windows tile / legacy IE */}
+        <meta name="msapplication-TileColor" content="#080608" />
+        <meta name="msapplication-TileImage" content="/android-chrome-192x192.png" />
+        <meta name="msapplication-config" content="none" />
 
         {/* JSON-LD Structured Data */}
         <script
