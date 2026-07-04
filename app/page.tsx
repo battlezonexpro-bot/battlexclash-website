@@ -53,7 +53,7 @@ export default function Home() {
           className="font-heading font-black leading-[1.08] tracking-tight text-white mb-3 sm:mb-4
             text-[1.9rem] xs:text-[2.2rem] sm:text-[3rem] md:text-[4.2rem] lg:text-[5.5rem]"
         >
-          INDIA'S #1<br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF9933] via-white to-[#138808]">INDIA'S</span> #1<br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent">
             ESPORTS PLATFORM
           </span>
